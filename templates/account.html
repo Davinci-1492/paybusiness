@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 class="title">Account</h2>
+<p>Welcome, {{ current_user.username }}!</p>
+<p>Email: {{ current_user.email }}</p>
+{% endblock %}

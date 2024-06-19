@@ -1,0 +1,17 @@
+import os
+
+class Config:
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    PAYPAL_CLIENT_ID = 'YOUR_PAYPAL_CLIENT_ID'
+    PAYPAL_CLIENT_SECRET = 'YOUR_PAYPAL_CLIENT_SECRET'
+    SCHEDULER_API_ENABLED = True
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = os.environ.get('EMAIL_USER')
+    MAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+    GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID'
+    GOOGLE_CLIENT_SECRET = 'YOUR_GOOGLE_CLIENT_SECRET'
+    OAUTHLIB_INSECURE_TRANSPORT = True

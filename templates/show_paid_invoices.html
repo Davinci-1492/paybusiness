@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h1 class="h3 mb-4 text-gray-800">Paid Invoices</h1>
+    <ul class="list-group">
+        {% for invoice in invoices %}
+        <li class="list-group-item">
+            {{ invoice.customer.name }} - {{ invoice.amount }} - Paid Date: {{ invoice.date.strftime('%Y-%m-%d') }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
